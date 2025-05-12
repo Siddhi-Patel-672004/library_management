@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+
+<!-- {% block page_content %}
+<h1>{{ article_name }}</h1>
+
+{% endblock %} -->
+
+{% for article in frappe.get_all("Article", fields=["name", "article_name", "route"]) %}
+  {% set full_article = frappe.get_doc("Article", article.name) %}
+  <!-- {% include "library_management/templates/includes/article_row.html" with context %} -->
+{% endfor %}
+
+
+<!-- this is a sample default web page template -->

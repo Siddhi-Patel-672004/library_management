@@ -69,6 +69,7 @@ app_license = "mit"
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
+website_generators = ["Person"]
 
 # Jinja
 # ----------
@@ -117,13 +118,13 @@ app_license = "mit"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
+permission_query_conditions = {
+	"Article": "library_management.library_management.doctype.article.article.get_permission_query_conditions",
+}
+
+has_permission = {
+	"Article": "library_management.library_management.doctype.article.article.has_permission",
+}
 
 # DocType Class
 # ---------------
